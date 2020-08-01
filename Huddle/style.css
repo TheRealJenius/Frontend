@@ -1,0 +1,25 @@
+.pink{
+    hsl(322, 100%, 66%)
+}
+
+.palecyan{
+    hsl(193, 100%, 96%)
+}
+
+.darcyan{
+    hsl(192, 100%, 9%)
+}
+
+.greyblue{
+    hsl(208, 11%, 55%)
+}
+
+.calltoaction{
+    font-family: "Open Sans";
+    font0wight: 400;
+}
+
+h1{
+    font-family: Poppins;
+    font-weight: 600;
+}
