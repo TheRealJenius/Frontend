@@ -1,3 +1,7 @@
+body{
+    font-size: 16px;
+}
+
 .pink{
     hsl(322, 100%, 66%)
 }
@@ -22,4 +26,49 @@
 h1{
     font-family: Poppins;
     font-weight: 600;
+}
+
+header{
+    background-image: url("./images/bg-hero-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    /*display: flex;*/
+    justify-content: center; /*align horizontally*/
+    align-items: center; /*align vertically*/
+    flex-wrap: wrap; /*allows us to wrap boxs to the next line for mobile devices/narrow screens*/
+    
+}
+
+#top{
+    /* needs to be a flex box to stay propotional with one another */
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+figure{
+    float:right;
+}
+button{
+    
+}
+.container{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#banner{
+    
 }
