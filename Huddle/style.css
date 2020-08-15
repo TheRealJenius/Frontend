@@ -1,9 +1,12 @@
+/* Presets */
+
 body{
     font-size: 16px;
+    margin: 0px; /* resetting the default of 8px borders */
 }
 
 .pink{
-    hsl(322, 100%, 66%)
+    
 }
 
 .palecyan{
@@ -20,7 +23,7 @@ body{
 
 .calltoaction{
     font-family: "Open Sans";
-    font0wight: 400;
+    font-weight: 400;
 }
 
 h1{
@@ -28,38 +31,56 @@ h1{
     font-weight: 600;
 }
 
+/* Header of page */
+
 header{
     background-image: url("./images/bg-hero-desktop.svg");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 50rem;
+    background-size: cover; /* handles the width*/
+    background-color: hsl(193, 100%, 96%);
+    padding: 1.2rem 2rem 3rem 2rem; /* reigns in the contents of the header */
     /*display: flex;*/
-    justify-content: center; /*align horizontally*/
-    align-items: center; /*align vertically*/
-    flex-wrap: wrap; /*allows us to wrap boxs to the next line for mobile devices/narrow screens*/
-    
+    /*justify-content: center; /*align horizontally*/
+    /*align-items: center; /*align vertically*/
+    /*flex-wrap: wrap; /*allows us to wrap boxs to the next line for mobile devices/narrow screens*/
+    /*flex-direction: column; /*set the flex boxes from top to bottom*/
 }
 
 #top{
     /* needs to be a flex box to stay propotional with one another */
+    /*padding: 1%;*/
+    width: 100%;
+    margin-bottom: 5%;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
-figure{
-    float:right;
-}
-button{
+#top img{
+    float: left;
     
+    /* Content  of the image box */
+    width: 10%;
+    height: auto;
 }
+
+#top button{
+    float: right;
+    background-color:#fff;
+    color: #000000;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+}
+
+#intro{
+    display: block;
+    max-width: 30%;
+    height: auto;
+}
+
 .container{
     width: 50%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
 }
 
@@ -67,8 +88,29 @@ button{
     max-width: 100%;
     height: auto;
     display: block;
+
+    /* Content  of the image box */
+    width: 60%;
+    height: auto;
 }
 
-#banner{
-    
+button{
+    border-radius: 3rem; /*rounded the edges*/
+    padding: 0.8rem 3rem;
+    background-color:hsl(322, 100%, 66%); /*pink default*/
+    color: #fff;
+}
+
+
+/* Main Body */
+
+
+/* Footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
