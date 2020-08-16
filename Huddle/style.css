@@ -1,111 +1,116 @@
 /* Presets */
 
-body{
-    font-size: 16px;
+body {
+    font-size: 18px;
     margin: 0px; /* resetting the default of 8px borders */
 }
 
-.pink{
-    
+.greyblue {
+    color:hsl(208, 11%, 55%)
 }
 
-.palecyan{
-    hsl(193, 100%, 96%)
-}
-
-.darcyan{
-    hsl(192, 100%, 9%)
-}
-
-.greyblue{
-    hsl(208, 11%, 55%)
-}
-
-.calltoaction{
+.calltoaction {
     font-family: "Open Sans";
     font-weight: 400;
 }
 
-h1{
+h1 {
     font-family: Poppins;
     font-weight: 600;
 }
 
 /* Header of page */
 
-header{
+header {
     background-image: url("./images/bg-hero-desktop.svg");
+    /* background-image: url("./images/bg-hero-mobile.svg"); <- for mobile when I do the media queries*/
+    background-color: hsl(193, 100%, 96%);
     background-repeat: no-repeat;
     background-size: cover; /* handles the width*/
-    background-color: hsl(193, 100%, 96%);
+    height: 100vh; /* 100% of the viewport height - so it takes the whole page */
+    
     padding: 1.2rem 2rem 3rem 2rem; /* reigns in the contents of the header */
+    
     /*display: flex;*/
-    /*justify-content: center; /*align horizontally*/
-    /*align-items: center; /*align vertically*/
+    
+    
     /*flex-wrap: wrap; /*allows us to wrap boxs to the next line for mobile devices/narrow screens*/
     /*flex-direction: column; /*set the flex boxes from top to bottom*/
 }
 
-#top{
+#top {
     /* needs to be a flex box to stay propotional with one another */
     /*padding: 1%;*/
-    width: 100%;
-    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
-#top img{
-    float: left;
+#top img {
+    
     
     /* Content  of the image box */
-    width: 10%;
-    height: auto;
+    flex-shrink: 10;
+    
 }
 
-#top button{
-    float: right;
+#top button {
     background-color:#fff;
     color: #000000;
+    border-color: transparent;
+    /* flex-shrink: 10;*/
 }
 
-#main{
-    display: flex;
-    align-items: center;
+#banner {
+    display: flex; /* wraps to the bottom when the screen shrinks */
+    align-items: center; /*align vertically*/
+    justify-content: space-evenly; /*align horizontally*/
+
 }
 
-#intro{
-    display: block;
-    max-width: 30%;
-    height: auto;
+#intro {
+    width: 40%;
 }
 
-.container{
-    width: 50%;
-    height: auto;
-    overflow: hidden;
+#banner img{ /* Content  of the image box */
+    width: 60%; /* relative to the container */
+    
 }
 
-.container img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-
-    /* Content  of the image box */
-    width: 60%;
-    height: auto;
-}
-
-button{
+button {
     border-radius: 3rem; /*rounded the edges*/
     padding: 0.8rem 3rem;
     background-color:hsl(322, 100%, 66%); /*pink default*/
     color: #fff;
+    border-color: transparent;
 }
 
 
 /* Main Body */
+main {
+    color: hsl(208, 11%, 55%);
+}
 
+.container {
+    display: flex;
+    /* flex: wrap; /* needed for smaller screens */
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5rem;
+    margin: 5rem; /* remember it's outside the border */
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 4rem rgb(158, 158, 158);
+}
+
+.container img{
+    width: 50%;
+}
 
 /* Footer */
+footer {
+    background-color:hsl(192, 100%, 9%);
+    color: whitesmoke
+}
 .attribution { 
     font-size: 11px; 
     text-align: center; 
