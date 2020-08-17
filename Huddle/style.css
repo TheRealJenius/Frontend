@@ -1,8 +1,11 @@
 /* Presets */
-
+* {
+    /* box-sizing: border-box; /* changes the way the css is understood */
+    margin: 0; /* resetting the default of 8px borders */
+    padding: 0;
+}
 body {
     font-size: 18px;
-    margin: 0px; /* resetting the default of 8px borders */
 }
 
 .greyblue {
@@ -89,21 +92,33 @@ button {
 /* Main Body */
 main {
     color: hsl(208, 11%, 55%);
+    width: 80%;
+    margin: 0 auto; /* centres the boxes, even when shrunk */
+    padding: 5rem;
 }
 
 .container {
-    display: flex;
-    /* flex: wrap; /* needed for smaller screens */
+    /* display: flex; */
+    flex: wrap; /* needed for smaller screens */
+    /* height: 25rem; */
     align-items: center;
     justify-content: space-evenly;
-    padding: 5rem;
+    padding: 1rem;
     margin: 5rem; /* remember it's outside the border */
     border-radius: 2rem;
     box-shadow: 1rem 1rem 4rem rgb(158, 158, 158);
+    
+}
+
+.container section{
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }
 
 .container img{
-    width: 50%;
+    width: 20%;
 }
 
 /* Footer */
