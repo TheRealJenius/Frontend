@@ -99,7 +99,8 @@ main {
 
 .container {
     /* display: flex; */
-    flex: wrap; /* needed for smaller screens */
+    flex-wrap: wrap; /* needed for smaller screens */
+    display: inline-flex;
     /* height: 25rem; */
     align-items: center;
     justify-content: space-evenly;
@@ -112,13 +113,14 @@ main {
 
 .container section{
     padding: 1rem 3rem;
-    display: flex;
+    
     flex-direction: column;
     width: 30%;
+    
 }
 
 .container img{
-    width: 20%;
+    width: 20rem;
 }
 
 /* Footer */
