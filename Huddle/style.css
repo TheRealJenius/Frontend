@@ -35,7 +35,6 @@ body {
 
 header {
     background-image: url("./images/bg-hero-desktop.svg");
-    /* background-image: url("./images/bg-hero-mobile.svg"); <- for mobile when I do the media queries*/
     background-color: hsl(193, 100%, 96%);
     background-repeat: no-repeat;
     background-size: cover; /* handles the width*/
@@ -110,7 +109,7 @@ main {
     color: hsl(208, 11%, 55%);
     width: 80%;
     margin: 0 auto; /* centres the boxes, even when shrunk */
-    padding: 5rem;
+    
 }
 
 h2 {
@@ -121,14 +120,14 @@ h2 {
 }
 
 .container {
-    /* display: flex; */
+    display: flex;
     flex-wrap: wrap; /* needed for smaller screens */
-    display: inline-flex;
+    /* display: inline-flex; */
     /* height: 25rem; */
     align-items: center;
     justify-content: space-evenly;
     padding: 5rem;
-    margin: 5rem; /* remember it's outside the border */
+    margin: 10%; /* remember it's outside the border */
     border-radius: 2rem;
     box-shadow: 1rem 1rem 4rem rgb(158, 158, 158);
     
@@ -153,26 +152,24 @@ footer {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 10rem;
     margin-top: 3rem;
 }
 
 
 #ready-box {
     background-color: white;
-    color: black;
     width: 35rem;
-    height: 7rem;
-    padding: 4rem;
-    margin: 1% auto;
+    /* height: 7rem; */
+    padding: 3% 1.5%; /* 3.5rem .... */
+    /* margin: 1% auto; */
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgb(71, 71, 71);
     position: absolute; /* ensure it stays in place */
-    bottom: 33rem;
+    bottom: 80%; /* using percentage to make sure it stays responsive even in it's absolute position */
     left: 32%;
 }
 
@@ -183,15 +180,18 @@ footer {
 
 #bottom-logo{
     filter: grayscale(100%) invert(100%) brightness(200%); /* changes the colour */
-    width: 20%;
     padding: 2rem 1rem;
 }
 
-#info{
+#footer-content {
+    margin: 10%;
+    margin-bottom: 1%;
+}
+
+#info {
     /* margin: 1% auto; not needed since the column class centre it */
     display: grid; /* like a table; also allows creation of rows and columns without using floats and positioning*/
     grid-template-columns: repeat(4, 1fr); /* instead of writing 25% 25% 25% 25% | also 'fr' means a fraction of the availble space, which in this case is divded by 4 */
-    
 }
 
 .column {
@@ -221,20 +221,70 @@ footer {
     text-decoration: none; /* removes the underline */
     color: white;
 }
+.column div {
+    display: flex;
+    align-items: flex-start; /* starts from the top left of the container */
+}
 
-#bottom {
+.column img {
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
+#copyright {
     display: flex;
     justify-content: flex-end;
+    margin: 1%;
 }
 
 #attribution { 
     font-size: 11px; 
     /* text-align: center;  */
-    position: absolute;
-    bottom: 0rem;
-    left: 41%;
+    margin: 1% auto;
+    margin-bottom: 0;
 }
 
 #attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width:880px) {
+    header {
+        background-image: url("./images/bg-hero-mobile.svg");
+    }
+    
+    .container {
+        padding: 4rem 2rem;
+    }
+
+    .container section {
+        width: 80%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #ready-box {
+        display: none;
+    }
+
+    #info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column {
+        margin: 0;
+    }
+
+    .links {
+        justify-content: center;
+    }
+
+    #footer-content {
+        margin-bottom: auto;
+    }
+    #copyright {
+        justify-content: center;
+        margin-bottom: 6%;
+    }
 }
