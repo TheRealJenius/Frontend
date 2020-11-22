@@ -57,16 +57,10 @@ header {
     margin-bottom: 2rem;
 }
 
-#top img {
-    /* Content  of the image box */
-    flex-shrink: 10;
-}
-
 #top button {
     background-color:#fff;
     color: #000000;
     border-color: transparent;
-    /* flex-shrink: 10;*/
 }
 
 #banner {
@@ -121,7 +115,6 @@ h2 {
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* needed for smaller screens */
     /* display: inline-flex; */
     /* height: 25rem; */
     align-items: center;
@@ -135,7 +128,6 @@ h2 {
 
 .container section{
     padding: 1rem 3rem;
-    
     flex-direction: column;
     width: 40%;
     
@@ -152,7 +144,7 @@ footer {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 3rem;
+    margin-top: 15rem;
 }
 
 
@@ -171,6 +163,7 @@ footer {
     position: absolute; /* ensure it stays in place */
     bottom: 80%; /* using percentage to make sure it stays responsive even in it's absolute position */
     left: 32%;
+    text-align: center;
 }
 
 #ready-box button{
@@ -205,12 +198,18 @@ footer {
 .links{
     flex-direction: row;
     margin: auto 0;
+    width: 7rem;
 }
 
-.links img{
-    width: 3rem;
+.links span{
     filter: invert(100%);
-    padding: 1rem;
+    padding: 9%;
+    border-radius: 50%; /* Makes the border rounded */
+    border: 2px solid black; /* black because we've inverted it above */
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
 }
 
 .column a, .column div {
@@ -235,10 +234,11 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin: 1%;
+    font-size: 1rem;
 }
 
 #attribution { 
-    font-size: 11px; 
+    font-size: 0.6rem; 
     /* text-align: center;  */
     margin: 1% auto;
     margin-bottom: 0;
@@ -252,19 +252,74 @@ footer {
     header {
         background-image: url("./images/bg-hero-mobile.svg");
     }
-    
+
+    body {
+        font-size: 18px;
+    }
+
+    #banner {
+        flex-direction: column;
+    }
+
+    #top img {
+        /* Content  of the image box */
+        width: 40%;
+    }
+
+    #top button {
+        padding: 0.2rem 1rem;
+    }
+
+    #intro {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #banner img {
+        width: 100%;
+    }
+
     .container {
         padding: 4rem 2rem;
+        flex-wrap: wrap; /* needed for smaller screens */
     }
 
     .container section {
         width: 80%;
         text-align: center;
-        padding: 1rem;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .container img{
+        width: 100%;
+    }
+
+    
+    .reverse{
+        flex-direction: column-reverse;
+    }
+
+    footer {
+        margin-top: 15rem;
     }
 
     #ready-box {
-        display: none;
+        position: static;
+        width: 90%;
+        margin: auto;
+        transform: translate(0%,-50%);
+        font-size: 0.7rem;
+    }
+
+    #ready-box h2 {
+        margin: 1rem;
+    }
+
+    #ready-box button{
+        margin-bottom: 1rem;
+        padding: 1rem 3rem;
     }
 
     #info {
@@ -278,13 +333,23 @@ footer {
 
     .links {
         justify-content: center;
+        margin: auto;
     }
 
     #footer-content {
         margin-bottom: auto;
+        margin-left: 5%;
+        margin-top: 0;
     }
     #copyright {
         justify-content: center;
+        text-align: center;
         margin-bottom: 6%;
     }
+
+    #attribution { 
+        margin: auto;
+        margin-bottom: 0;
+    }
+    
 }
